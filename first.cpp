@@ -263,6 +263,7 @@ int main() {
     }
     */
 
+    /*
     char op;
     double num1;
     double num2;
@@ -300,5 +301,39 @@ int main() {
             break;
     }
     std::cout << "\n********************************";
+    */
+
+    // ternary operator ? - replacement to an if/else statement
+    // condition ? expression 1 : expression 2;
+
+    /*
+    char sex;
+
+    std::cout << "Enter your sexuality (M F): ";
+    std::cin >> sex;
+
+    sex == 'M' ? std::cout << "You are male" : std::cout << "You are female";
+    */
+
+    /*
+    int number;
+
+    std::cout << "Choose a number: ";
+    std::cin >> number;
+
+    number % 2 ? std::cout << "Your number is ODD!" : std::cout << "Your number is EVEN!"; // No comparison needed, 1 equates to true and 0 equates to false
+    */
+
+    /*
+    bool hungry = true;
+
+    //hungry ? std::cout << "You are hungry" : std::cout << "You are not hungry";
+    std::cout << (hungry ? "You are hungry" : "You are full");
+    */
+
+    // && - check if both conditions are true (AND)
+    // || - check if atleast one of the conditions are true (OR)
+    // ! = reverses the logical states of the operand (NOT)
+
     return 0;
 }
