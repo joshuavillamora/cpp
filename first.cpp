@@ -190,7 +190,7 @@ int main() {
 
     // switch - alternative to using too many "if else" statements
     //          compare one value against matching cases
-
+    /*
     int month;
     std::cout << "Enter the month (1-12): ";
     std::cin >> month;
@@ -234,5 +234,71 @@ int main() {
         default:
             std::cout << "Please enter numbers (1-12)";
     }
+    */
+
+    /*
+    char grade;
+
+    std::cout << "What letter grade?: ";
+    std::cin >> grade;
+    switch (grade) {
+        case 'A':
+            std::cout << "Good job!";
+            break;
+        case 'B':
+            std::cout << "Nice!";
+            break;
+        case 'C':
+            std::cout << "Could be better...";
+            break;
+        case 'D':
+            std::cout << "Do better next time.";
+            break;
+        case 'F':
+            std::cout << "You're expelled.";
+            break;
+        default:
+            std::cout << "Enter grade letters (A-F)";
+            break;
+    }
+    */
+
+    char op;
+    double num1;
+    double num2;
+    double result;
+    std::cout << "********** CALCULATOR **********\n";
+
+    std::cout << "Enter arithmetic operator (+ - * /): ";
+    std::cin >> op;
+
+    std::cout << "Enter first number: ";
+    std::cin >> num1;
+
+    std::cout << "Enter second number: ";
+    std::cin >> num2;
+
+    switch(op) {
+        case '+':
+            result = num1 + num2;
+            std::cout << num1 << " + " << num2 << " = " << result;
+            break;
+        case '-':
+            result = num1 - num2;
+            std::cout << num1 << " - " << num2 << " = " << result;
+            break;
+        case '*':
+            result = num1 * num2;
+            std::cout << num1 << " * " << num2 << " = " << result;
+            break;
+        case '/':
+            result = num1 / num2;
+            std::cout << num1 << " / " << num2 << " = " << result;
+            break;
+        default:
+            std::cout << "That wasn't a valid response";
+            break;
+    }
+    std::cout << "\n********************************";
     return 0;
 }
