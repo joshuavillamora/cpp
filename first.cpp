@@ -374,5 +374,51 @@ int main() {
     }
     std::cout << "\n******************************************";
     */
+
+    // String Methods
+    /*
+    std::string name;
+    std::string pass;
+    std::string num;
+    std::cout << "Enter your name: ";
+    std::getline(std::cin, name);
+    std::cout << "Please choose a password: ";
+    std::getline(std::cin, pass); // Use getline if name contains spaces
+    std::cout << "Enter your number: ";
+    std::cin >> num;
+    
+    if (pass.empty()) 
+    {
+        std::cout << "You didn't enter your password.\n";
+        std::cout << "Try Again.\n";
+    }
+    else if (pass.length() > 12) 
+    {
+        std::cout << "Password is too long!\n";
+        std::cout << "Try Again!\n";
+    } 
+    else {
+        std::cout << "This password is valid.\n";
+        std::cout << "You may enter.\n";
+    }
+
+    name.append("@gmail.com");
+    std::cout << "Your username is now " << name << "\n";
+
+    pass.clear();
+    std::cout << "Your password is... " << pass << "\n";
+
+    std::cout << "Your initial is " << name.at(0) << "\n";
+
+    name.insert(0, "@");
+    std::cout << "Your account is " << name << "\n";
+
+    std::cout << name.find('e') << "\n";
+
+    num.erase(0, 1); // .erase(Beginning Index, Ending Index)
+    num.insert(0, "+63"); // .insert(Index, String/Integer/Character)
+    std::cout << "Your number is " << num << "\n";
+    */
+
     return 0;
 }
