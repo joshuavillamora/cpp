@@ -334,6 +334,45 @@ int main() {
     // && - check if both conditions are true (AND)
     // || - check if atleast one of the conditions are true (OR)
     // ! = reverses the logical states of the operand (NOT)
+    
+    /*
+    int temp;
+    bool sunny = true;
 
+    std::cout << "Enter the temperature: ";
+    std::cin >> temp;
+
+    std::cout << ((temp >= 24 && temp <= 30) ? "Weather is good\n" : "Weather is bad\n");
+    std::cout << (!sunny ? "It is cloudy outside...": "It is sunny outside!" );
+    */
+
+    /*
+    std::cout << "**********TEMPERATURE CONVERSION**********\n";
+    char scale;
+    double result;
+    double temperature;
+    std::cout << "F = Fahrenheit\n";
+    std::cout << "C = Celsius\n";
+    std::cout << "What unit would you like to convert to: ";
+    std::cin >> scale;
+    switch (scale) {
+        case 'F':
+            std::cout << "Enter the temperature in degree Celsius: ";
+            std::cin >> temperature;
+            result = (temperature * 9 / 5) + 32;
+            std::cout << "The temperature is " << result << " degree Fahrenheit";
+            break;
+        case 'C':
+            std::cout << "Enter the temperature in degree Fahrenheit: ";
+            std::cin >> temperature;
+            result = (temperature - 32) * 5 / 9;
+            std::cout << "The temperature is " << result << " degree Celsius";
+            break;
+        default:
+            std::cout << "Enter a valid answer.";
+            break;
+    }
+    std::cout << "\n******************************************";
+    */
     return 0;
 }
