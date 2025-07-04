@@ -263,7 +263,6 @@ int main() {
     }
     */
 
-    /*
     char op;
     double num1;
     double num2;
@@ -420,5 +419,67 @@ int main() {
     std::cout << "Your number is " << num << "\n";
     */
 
+    // While loops
+    /*
+    std::string name;
+
+    while (name.empty()) {
+        std::cout << "Enter your name: ";
+        std::getline(std::cin, name);
+    }
+    
+    std::cout << "Hello " << name;
+
+    while (1 == 1) {
+        std::cout << "Wha- \n";
+    }
+    */
+
+    // do while loop - do some block of code first,
+    //                 THEN repeat again if condition is true
+    /*
+    int number;
+
+    while (number < 0) // Doesn't work because declared integers default to 0
+    {
+        std::cout << "Enter a positive number: ";
+        std::cin >> number;
+    }
+
+    std::cout << "The number is" << number;
+
+    int number;
+    do {
+        std::cout << "Enter a positive number: ";
+        std::cin >> number;
+    } while (number < 0);
+
+    std::cout << "The number is " << number;
+    */
+
+    // for loops for(index; condition; increment)
+    /*
+    for (int i = 0; i <= 10; i+=2) {
+        std::cout << i << "\n";
+    }
+    std::cout << "Happy New Year!";
+    */
+
+    // break - break out of a loop
+    // continue - skip current iteration
+
+    for (int i = 0; i <= 20; i++) {
+        if (i == 13) {
+            break;
+        }
+        std::cout << i << "\n";
+    }
+
+    for (int i = 0; i <= 20; i++) {
+        if (i == 13) {
+            continue;
+        }
+        std::cout << i << "\n";
+    }
     return 0;
 }
