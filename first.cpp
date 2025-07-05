@@ -484,6 +484,9 @@ int main() {
     }
     */
 
+    // Nested loops
+
+    /*
     int rows;
     int col;
     char symbol;
@@ -499,6 +502,14 @@ int main() {
             std::cout << symbol;
         }
         std::cout << '\n';
+    }
+    */
+
+    // pseudo-random - NOT truly random (but close)
+    srand(time(NULL)); // srand(seed) calendar time is typically used as seed
+    for (int i = 1; i <= 3; i++) {
+        int num = (rand() % 6) + 1; // 6 sided dice
+        std::cout << num << ' ';
     }
     return 0;
 }
