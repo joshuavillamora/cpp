@@ -263,6 +263,7 @@ int main() {
     }
     */
 
+    /*
     char op;
     double num1;
     double num2;
@@ -467,7 +468,7 @@ int main() {
 
     // break - break out of a loop
     // continue - skip current iteration
-
+    /*
     for (int i = 0; i <= 20; i++) {
         if (i == 13) {
             break;
@@ -480,6 +481,24 @@ int main() {
             continue;
         }
         std::cout << i << "\n";
+    }
+    */
+
+    int rows;
+    int col;
+    char symbol;
+    std::cout << "Build a Rectangle!\n";
+    std::cout << "How many rows? ";
+    std::cin >> rows;
+    std::cout << "How many columns? ";
+    std::cin >> col;
+    std::cout << "Enter a symbol: ";
+    std::cin >> symbol;
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= col; j++) {
+            std::cout << symbol;
+        }
+        std::cout << '\n';
     }
     return 0;
 }
