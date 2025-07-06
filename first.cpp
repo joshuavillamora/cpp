@@ -506,10 +506,99 @@ int main() {
     */
 
     // pseudo-random - NOT truly random (but close)
+    /*
     srand(time(NULL)); // srand(seed) calendar time is typically used as seed
-    for (int i = 1; i <= 3; i++) {
-        int num = (rand() % 6) + 1; // 6 sided dice
+    while (1 == 1) {
+        int num = (rand() % 9) + 1; // 6 sided dice
         std::cout << num << ' ';
     }
+    */
+
+    // Random Event Generator
+    /*
+    srand(time(0));
+    int randNum = rand() % 5 + 1;
+    switch (randNum) {
+        case 1:
+            std::cout << "Congrats! You win a brand new Honda Civic!";
+            break;
+        case 2:
+            std::cout << "You win 10,000 pesos!";
+            break;
+        case 3:
+            std::cout << "You win a discount coupon!";
+            break;
+        case 4:
+            std::cout << "You win a tshirt!";
+            break;
+        case 5:
+            std::cout << "You win a sticker!";
+            break;
+        default:
+            std::cout << "You won nothing.";
+            break;
+    }
+    */
+
+    int opp = rand() % 3 + 1;
+    int oppHealth = 3;
+    int health = 3;
+    int guess;
+
+    srand(time(0));
+
+    std::cout << "Rock, Paper, or Scissors (1-3)? ";
+    std::cin >> guess;
+
+    std::cout << "Rock \n"; 
+    std::cout << "Paper \n"; 
+    std::cout << "Scissors \n"; 
+    std::cout << "SHOOT! \n";
+
+    switch (guess) {
+        case 1:
+        switch (opp) {
+            case 1:
+            std::cout << "Your opponent picked Rock! It's a Draw!";
+            break;
+            case 2:
+            std::cout << "Your opponent picked Paper! You lose!";
+            break;
+            case 3:
+            std::cout << "Your opponent picked Scissors! You win!";
+            break;
+        }
+        break;
+        case 2:
+        switch (opp) {
+            case 1:
+            std::cout << "Your opponent picked Rock! You win!";
+            break;
+            case 2:
+            std::cout << "Your opponent picked Paper! It's a draw!";
+            break;
+            case 3:
+            std::cout << "Your opponent picked Scissors! You lose!";
+            break;
+        }
+        break;
+        case 3:            
+        switch (opp) {
+            case 1:
+            std::cout << "Your opponent picked Rock! You lose!";
+            break;
+            case 2:
+            std::cout << "Your opponent picked Paper! You win!";
+            break;
+            case 3:
+            std::cout << "Your opponent picked Scissors! It's a draw!";
+            break;
+        }
+        break;
+        default:
+        std::cout << "Pick a number between 1-3.";
+        break;
+    }
+
     return 0;
 }
