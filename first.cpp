@@ -11,6 +11,7 @@ using text_t = std::string;
 using number_t = int;
 */
 
+/*
 namespace first{
     std::string name = "Earik";
 }
@@ -603,6 +604,7 @@ int main() {
     }
     */
 
+    /*
     int num;
     int guess;
     int tries = 0;
@@ -627,3 +629,38 @@ int main() {
 
     return 0;
 }
+*/
+
+/*
+void happyBirthday(std::string birthdayBoy, int age) {
+    std::cout << "Happy birthday to you!\n";
+    std::cout << "Happy birthday to you!\n";
+    std::cout << "Happy birthday dear " << birthdayBoy << "! \n";
+    std::cout << "Happy birthday to you!\n\n";
+    std::cout << "You are now " << age << " years old!";
+}
+return 0;
+
+int main() {
+    std::string name = "Joshua";
+    int age = 18;
+    happyBirthday(name, age);
+    return 0;
+}
+
+void calculate(int a, int b) {
+    double c;
+    c = sqrt((a * a) + (b * b));
+    std::cout << "The value of c is " << c;
+}
+int main() {
+    double a;
+    std::cout << "Enter value of a: ";
+    std::cin >> a;
+    double b = 4;
+    std::cout << "Enter value of b: ";
+    std::cin >> b;
+    calculate(a, b);
+    return 0; 
+}
+*/
