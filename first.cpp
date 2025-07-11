@@ -664,3 +664,62 @@ int main() {
     return 0; 
 }
 */
+
+/*
+int main() {
+    int tickets;
+    std::cout << "Enter tickets needed: ";
+    std::cin >> tickets;
+    int sessions;
+    int tokens;
+    sessions = tickets / 60;
+    tokens = sessions * 2;
+    std::cout << "Tickets needed are " << tickets << '\n';
+    std::cout << "Sessions required: " << sessions << '\n';
+    std::cout << "Tokens required: " << tokens << '\n';
+
+    return 0;
+}
+*/
+
+/*
+// declaring the function
+double square(double length);
+double cube(double length);
+
+int main () {
+    // return - return a value back to the spot
+    //          where you called the encompassing function
+    double length = 5.0;
+    double area = square(length);
+    double volume = cube(length);
+    std::cout << "Length is " << length << "m\n";
+    std::cout << "Area: " << area << "cm^2\n";
+    std::cout << "Volume: " << volume << "cm^3";
+    return 0;
+}
+
+double square(double length) {
+    double result = length * length;
+    return result;
+}
+
+double cube(double length) {
+    double result = length * length * length;
+    return result;
+}
+*/
+
+std::string concat(std::string string1, std::string string2);
+
+int main() {
+    std::string firstName = "Joshua";
+    std::string lastName = "Villamora";
+    std::string fullName = concat(firstName, lastName);
+    std::cout << "Hello " << fullName;
+    return 0;
+}
+
+std::string concat(std::string string1, std::string string2) {
+    return string1 + " " + string2;
+}
