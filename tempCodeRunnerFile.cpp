@@ -1,3 +1,1 @@
-
-    return 0;
-}
+You lack the required funds for this transaction
