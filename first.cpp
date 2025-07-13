@@ -847,3 +847,117 @@ double withdraw(double balance) {
     }
 }
 */
+
+char getUserChoice();
+char getComputerChoice();
+void showChoice(char choice);
+void chooseWinner(char player, char computer);
+
+int main() {
+    char player;
+    char computer;
+
+    player = getUserChoice();
+    std::cout << "Your choice: ";
+    showChoice(player);
+
+    computer = getComputerChoice();
+    std::cout << "Computer choice: ";
+    showChoice(computer);
+
+    std::cout << "Rock\n";
+    std::cout << "Paper\n";
+    std::cout << "Scissors\n";
+    std::cout << "SHOOT\n";
+    chooseWinner(player, computer);
+    return 0;
+}
+
+char getUserChoice() {
+    char player;
+    std::cout << "Rock-Paper-Scissors Game\n";
+    do {
+        std::cout << "************************\n";
+        std::cout << "'r' for rock\n";
+        std::cout << "'p' for paper\n";
+        std::cout << "'s' for scissors\n";
+        std::cin >> player;
+    } while(player != 'r' && player != 'p' && player != 's');
+    return player;
+}
+char getComputerChoice() {
+    srand(time(0));
+    int rng = rand() % 3 + 1;
+    switch (rng) {
+        case 1:
+            return 'r';
+        case 2:
+            return 'p';
+        case 3:
+            return 's';
+        default:
+            std::cout << "Computer choice invalid!";
+            break;
+    }
+}
+void showChoice(char choice) {
+    switch (choice) {
+        case 'r':
+            std::cout << "Rock\n";
+            break;
+        case 'p':
+            std::cout << "Paper\n";
+            break;
+        case 's':
+            std::cout << "Scissors\n";
+            break;
+        default:
+            std::cout << "Invalid!";
+            break;
+    }
+}
+void chooseWinner(char player, char computer) {
+    switch (player) {
+        case 'r':
+            if (computer == 'r') {
+                std::cout << "It's a tie!";
+            } else if (computer == 'p') {
+                std::cout << "Computer wins!";
+            } else if (computer == 's') {
+                std::cout << "Player wins!";
+            } else {
+                std::cout << "Invalid match.";
+            }
+            break;
+        case 'p':
+            if (computer == 'r') {
+                std::cout << "Player wins!";
+            } else if (computer == 'p') {
+                std::cout << "It's a tie!";
+            } else if (computer == 's') {
+                std::cout << "Computer wins!";
+            } else {
+                std::cout << "Invalid match.";
+            }
+          break;
+        case 's':
+            switch (computer) {
+                case 'r':
+                    std::cout << "Computer wins!";
+                    break;
+                case 'p':
+                    std::cout << "Player wins!";
+                    break;
+                case 's':
+                    std::cout << "It's a tie!";
+                    break;
+                default:
+                    std::cout << "Invalid match!";
+                    break;
+            }
+           break;
+        default:
+            std::cout << "Invalid match.";
+            break;
+    }   
+}
