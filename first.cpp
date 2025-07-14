@@ -848,6 +848,7 @@ double withdraw(double balance) {
 }
 */
 
+/*
 char getUserChoice();
 char getComputerChoice();
 void showChoice(char choice);
@@ -960,4 +961,67 @@ void chooseWinner(char player, char computer) {
             std::cout << "Invalid match.";
             break;
     }   
+}
+*/
+
+// array - a data structure than can hold multiple values
+//         values are accessed by an index number
+//         "kind of like a variable that holds multiple values"
+
+int main() {
+    /*
+    std::string cars[] = {"Subaru", "Hellcat", "Honda"};
+
+    cars[0] = "Fortuner";
+
+    std::cout << cars[0] << '\n';
+    std::cout << cars[1] << '\n';
+    std::cout << cars[2] << '\n';
+    */
+
+    /*
+    double prices[] = {5.00, 7.50, 9.99, 15.00};
+    std::cout << '$' << prices[0] << '\n';
+    std::cout << '$' << prices[1] << '\n';
+    std::cout << '$' << prices[2] << '\n';
+    std::cout << '$' << prices[3] << '\n';
+    */
+
+    // sizeof() - determines the size in bytes of:
+    //            variable, data type, class, objects, etc.
+
+    /*
+    int grade = 93;
+    double gpa = 4.0;
+    std::string name = "ari";
+    char initial = 'a';
+    bool sleepy = true;
+    
+    std::cout << "string is " << sizeof(name) << " bytes\n";
+    std::cout << "double is " << sizeof(double) << " bytes\n";
+    std::cout << "int is " << sizeof(grade) << " bytes\n";
+    std::cout << "char is " << sizeof(initial) << " bytes\n";
+    std::cout << "bool is " << sizeof(sleepy) << " bytes\n";
+    */
+
+    // Calculating the size of an array
+    /*
+    int grades[] = {93, 91, 92, 95, 95};
+    std::cout << "The array 'grades' has " << sizeof(grades)/sizeof(int) << " elements\n";
+
+    std::string destinations[] = {"Leon", "Tubungan", "Pavia", "Circumferential"};
+    std::cout << "The array 'destinations' has " << sizeof(destinations)/sizeof(std::string) << " elements";
+    */
+
+    // Iterate over an array
+    std::string courses[] = {"BSCS", "BSIT", "BSIS", "BSEMC", "BLIS"};
+    int coursesLength = sizeof(courses)/sizeof(std::string);
+
+    std::cout << "CICT Courses \n";
+    for (int i = 0; i < coursesLength; i++) {
+        std::cout << courses[i] << '\n';
+    }
+
+
+    return 0;   
 }
