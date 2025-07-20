@@ -1100,6 +1100,7 @@ int searchArray(std::string foods[], int size, std::string myFood) {
 // bubble sort - a simple sorting algorithm that works by repeatedly
 //               comparing and swapping adjacent elements
 
+/*
 void sort(int numbers[], int size);
 
 int main() {
@@ -1126,4 +1127,22 @@ void sort(int numbers[], int size) {
             }
         }
     }
+}
+*/
+
+int main() {
+    // fill() - Fills a range of elements with a specified value
+    //          fill(begin, end, value)
+
+    const int SIZE = 100;
+    std::string foods[SIZE];
+
+    fill(foods, foods + (SIZE/3), "pizza");
+    fill(foods + (SIZE / 3), foods + (SIZE / 3) * 2, "hamburger");
+    fill(foods + (SIZE / 3) * 2, foods + SIZE, "hotdog");
+
+    for (std::string food : foods) {
+        std::cout << food << " ";
+    }
+    return 0;
 }
