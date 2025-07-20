@@ -968,6 +968,7 @@ void chooseWinner(char player, char computer) {
 //         values are accessed by an index number
 //         "kind of like a variable that holds multiple values"
 
+/*
 int main() {
     /*
     std::string cars[] = {"Subaru", "Hellcat", "Honda"};
@@ -1014,6 +1015,7 @@ int main() {
     */
 
     // Iterate over an array
+    /*
     std::string courses[] = {"BSCS", "BSIT", "BSIS", "BSEMC", "BLIS"};
     int coursesLength = sizeof(courses)/sizeof(std::string);
 
@@ -1021,7 +1023,74 @@ int main() {
     for (int i = 0; i < coursesLength; i++) {
         std::cout << courses[i] << '\n';
     }
+    */
 
+    // foreach loop - loop that eases the traversal over an
+    //                iterable data set 
+    /* example
+    for (dataType elementName : dataSet) {
+        
+    }
 
+    // std::string students[] = {"Spongebob", "Patrick", "Squidward"}; 
+
+    int grades[] = {98, 87, 93, 96, 84};
+
+    for (int grade : grades) {
+        std::cout << grade << '\n';
+    }
     return 0;   
+}
+*/
+
+/*
+double getTotal(double prices[], int pricesLength);
+
+int main() {
+    double prices[] = {130.25, 1.25, 16.75, 50.50, 78.25, 4.50};
+    int pricesLength = sizeof(prices)/sizeof(prices[0]);
+    double total = getTotal(prices, pricesLength);
+    std::cout << '$' << std::setprecision(2) << std::fixed << total;
+    return 0;
+}
+
+double getTotal(double prices[], int pricesLength) {
+    double total = 0;
+    for (int i = 0; i <= pricesLength; i++) {
+        total += prices[i];
+    }
+
+    return total;
+}
+*/
+
+int searchArray(std::string foods[], int size, std::string myFood);
+
+int main() {
+    std::string foods[] = {"brownies", "mogu-mogu", "milktea", "fries"};
+    int size = sizeof(foods)/sizeof(foods[0]);
+    int index;
+    std::string myFood;
+
+    std::cout << "Enter element to search for: ";
+    std::getline(std::cin, myFood);
+
+    index = searchArray(foods, size, myFood);
+
+    if (index != -1) {
+        std::cout << myFood << " is at index " << index;
+    } else {
+        std::cout << myFood << " is not included in the array";
+    }
+
+    return 0;
+}
+
+int searchArray(std::string foods[], int size, std::string myFood) {
+    for (int i = 0; i < size; i++) {
+        if (foods[i] == myFood) {
+            return i;
+        }
+    }
+    return -1;
 }
