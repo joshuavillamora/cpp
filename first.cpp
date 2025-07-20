@@ -1064,6 +1064,7 @@ double getTotal(double prices[], int pricesLength) {
 }
 */
 
+/*
 int searchArray(std::string foods[], int size, std::string myFood);
 
 int main() {
@@ -1093,4 +1094,36 @@ int searchArray(std::string foods[], int size, std::string myFood) {
         }
     }
     return -1;
+}
+*/
+
+// bubble sort - a simple sorting algorithm that works by repeatedly
+//               comparing and swapping adjacent elements
+
+void sort(int numbers[], int size);
+
+int main() {
+    int numbers[] = {7, 3, 9, 4, 1, 10, 6, 8, 5, 2};
+    int size = sizeof(numbers)/sizeof(numbers[0]);
+
+    sort(numbers, size);
+
+    for (int number : numbers) {
+        std::cout << number << ' ';
+    }
+
+    return 0;
+}
+
+void sort(int numbers[], int size) {
+    int temp;
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (numbers[j] > numbers[j + 1]) {
+                temp = numbers[j];
+                numbers[j] = numbers[j + 1];
+                numbers[j + 1] = temp;
+            }
+        }
+    }
 }
