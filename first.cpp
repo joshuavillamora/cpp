@@ -1130,6 +1130,7 @@ void sort(int numbers[], int size) {
 }
 */
 
+/*
 int main() {
     // fill() - Fills a range of elements with a specified value
     //          fill(begin, end, value)
@@ -1172,6 +1173,7 @@ int main() {
     }
     */
 
+    /*
     std::string cars[][3] = {{"Mustang", "Escape", "Ford F-150"}, {"Corvette", "Equinox", "Silverado"}, {"Challenger", "Durango", "Ram 1500"}};
     std::string dog[] = {"hi", "hello"};
     int rows = sizeof(cars)/sizeof(cars[0]);
@@ -1183,6 +1185,7 @@ int main() {
         }
         std::cout << "\n";
     }
+    */
 
     /*
     std::cout << cars[0][0] << " ";
@@ -1194,6 +1197,34 @@ int main() {
     std::cout << cars[2][0] << " ";
     std::cout << cars[2][1] << " ";
     std::cout << cars[2][2] << "\n";
-    */
+    
+    return 0;
+}
+*/
+
+int main() {
+    std::string questions[] = {"1. What year was C++ invented? ", "2. Who created C++? ", "3. What is the predecessor of C++ "};
+    std::string answers[][4] = {{"A. 1967", "B. 1879", "C. 1976", "D. 1985"}, {"A. Guido Van Rossum", "B. Bjarne Stroustrup", "C. John Carmack", "D. Mark Zuckerberg"}, {"A. C", "B. C+", "C. C--", "D. B++" }};
+    char answer[] = {'D', 'B', 'A'};
+
+    int size = sizeof(questions)/sizeof(questions[0]);
+    char choice;
+    int points;
+
+    for (int i = 0; i < size; i++) {
+        std::cout << "**************************" << "\n";
+        std::cout << questions[i] << "\n";
+        std::cout << "**************************" << "\n";
+        for (int j = 0; j < sizeof(answers[i])/sizeof(answers[i][0]); j++) {
+            std::cout << answers[i][j] << '\n';
+        };
+        std::cin >> choice;
+        if (choice == answer[i]) {
+            points++;
+        };
+    }
+    
+    std::cout << "Congratulations! You scored " << points << " points.";
+
     return 0;
 }
