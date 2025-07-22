@@ -1134,6 +1134,7 @@ int main() {
     // fill() - Fills a range of elements with a specified value
     //          fill(begin, end, value)
 
+    /*
     const int SIZE = 100;
     std::string foods[SIZE];
 
@@ -1144,5 +1145,30 @@ int main() {
     for (std::string food : foods) {
         std::cout << food << " ";
     }
+    */
+
+    // filling with user input
+
+    std::string desserts[5];
+    int size = sizeof(desserts)/sizeof(desserts[0]);
+    std::string temp;
+
+    for (int i = 0; i < size; i++) {
+        std::cout << "Enter a dessert to add to the menu or 'q' to quit (" << i + 1 << "/" << size << "): ";
+        std::getline(std::cin, temp);
+        if (temp == "q") {
+            break;
+        } else {
+            desserts[i] = temp;
+        }
+
+    }
+
+    std::cout << "You like the following food:\n";
+
+    for (int i = 0; !desserts[i].empty(); i++) {
+        std::cout << desserts[i] << '\n';
+    }
+
     return 0;
 }
