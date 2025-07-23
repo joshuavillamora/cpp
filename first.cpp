@@ -1220,11 +1220,19 @@ int main() {
         };
         std::cin >> choice;
         if (choice == answer[i]) {
+            std::cout << "CORRECT\n";
             points++;
+        } else {
+            std::cout << "INCORRECT\n";
+            std::cout << "Correct Answer: " << answer[i] << '\n';
         };
     }
     
-    std::cout << "Congratulations! You scored " << points << " points.";
-
+    std::cout << "***************************" << "\n";
+    std::cout << "*         RESULTS         *" << "\n";
+    std::cout << "***************************" << "\n";
+    std::cout << "Congratulations! You scored " << points << " points\n";
+    std::cout << "Out of " << size << " questions\n";
+    std::cout << "Score:" << std::setprecision(2) << std::fixed << (points/(double)size) * 100 << "%";
     return 0;
 }
